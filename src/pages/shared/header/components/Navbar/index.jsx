@@ -44,9 +44,9 @@ const Navbar = () => {
           ))}
           {user ? (
             <button
-              className={`block px-4 py-1.5 rounded bg-orange-400 font-medium border border-orange-400 hover:bg-orange-400/10 ${
+              className={`block px-4 py-1.5 rounded bg-amber-500 font-medium border border-amber-500 hover:bg-amber-500/10 ${
                 pathname === '/' || pathname?.includes('/booking')
-                  ? 'text-white hover:text-orange-400'
+                  ? 'text-white hover:text-amber-500'
                   : 'text-black'
               } transition-colors duration-200`}
             >
@@ -54,9 +54,9 @@ const Navbar = () => {
             </button>
           ) : (
             <Link
-              className={`block px-4 py-1.5 rounded bg-orange-400 font-medium border border-orange-400 hover:bg-orange-400/10 ${
+              className={`block px-4 py-1.5 rounded bg-amber-500 font-medium border border-amber-500 hover:bg-amber-500/10 ${
                 pathname === '/' || pathname?.includes('/booking')
-                  ? 'text-white hover:text-orange-400'
+                  ? 'text-white hover:text-amber-500'
                   : 'text-black'
               } transition-colors duration-200`}
               to={'/login'}

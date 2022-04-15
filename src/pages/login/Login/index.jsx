@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import Button from '../../shared/header/standalone/Button'
-import Input from '../../shared/header/standalone/Input'
+import SocialLogin from '../../shared/socialLogin/SocialLogin'
+import Button from '../../shared/standalone/Button'
+import Input from '../../shared/standalone/Input'
 
 const Login = () => {
   const [email, setEmail] = useState('')
@@ -54,6 +55,8 @@ const Login = () => {
           </span>
         </p>
       </div>
+
+      <SocialLogin />
     </main>
   )
 }

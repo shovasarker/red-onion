@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import SocialLogin from '../../shared/socialLogin/SocialLogin'
-import Button from '../../shared/standalone/Button'
-import Input from '../../shared/standalone/Input'
+import SocialLogin from '../shared/socialLogin/SocialLogin'
+import Button from '../shared/standalone/Button'
+import Input from '../shared/standalone/Input'
 
 const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const navigate = useNavigate()
   return (
-    <main className='container px-6 md:px-10 lg:px-16 xl:px-20'>
+    <main className='container px-6 md:px-10 lg:px-16 xl:px-20 mt-5 mb-10'>
       <div className='w-full md:w-[570px] mx-auto px-6 md:px-12 py-10 border border-slate-400 rounded font-montserrat font-medium'>
         <h2 className='text-2xl font-bold mb-12'>Login</h2>
         <form>
@@ -28,7 +28,7 @@ const Login = () => {
             label='Password'
           />
 
-          <div className='mt-5 mb-10 flex justify-between items-center'>
+          <div className='mt-5 mb-10 flex justify-between items-center flex-wrap gap-4'>
             <div className='flex justify-center items-center'>
               <input
                 type='checkbox'
@@ -45,15 +45,15 @@ const Login = () => {
           </div>
           <Button wFull>Login</Button>
         </form>
-        <p className='font-medium text-center mt-5'>
-          Don't have an account?{' '}
-          <span
-            className='ml-2 underline underline-offset-1 text-amber-500 cursor-pointer hover:opacity-70 transition-opacity duration-300'
+        <div className='flex justify-center items-center gap-2 flex-wrap'>
+          <p className='font-medium text-center mt-5'>Don't have an account?</p>
+          <button
+            className='underline underline-offset-1 text-amber-500 cursor-pointer hover:opacity-70 transition-opacity duration-300'
             onClick={() => navigate('/create-account', { replace: true })}
           >
             Create an account
-          </span>
-        </p>
+          </button>
+        </div>
       </div>
 
       <SocialLogin />

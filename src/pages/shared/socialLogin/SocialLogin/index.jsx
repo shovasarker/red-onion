@@ -16,7 +16,7 @@ const SocialLogin = () => {
         />
         Continue With Facebook
       </Button>
-      <Button wFull pill outlined>
+      <Button wFull pill outlined className={'mt-3'}>
         <img
           src={googleIcon}
           alt=''

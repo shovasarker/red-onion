@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import SocialLogin from '../shared/socialLogin/SocialLogin'
 import Button from '../shared/standalone/Button'
 import Input from '../shared/standalone/Input'
+import LinkButton from '../shared/standalone/LinkButton'
+import MessageLink from '../shared/standalone/MessageLink'
 
 const Login = () => {
   const [email, setEmail] = useState('')
@@ -39,21 +41,15 @@ const Login = () => {
                 Remember Me
               </label>
             </div>
-            <button className='text-amber-500 underline underline-offset-1 font-medium hover:opacity-70 transition-opacity duration-300'>
-              Forget Password?
-            </button>
+            <LinkButton>Forget Password?</LinkButton>
           </div>
           <Button wFull>Login</Button>
         </form>
-        <div className='flex justify-center items-center gap-2 flex-wrap'>
-          <p className='font-medium text-center mt-5'>Don't have an account?</p>
-          <button
-            className='underline underline-offset-1 text-amber-500 cursor-pointer hover:opacity-70 transition-opacity duration-300'
-            onClick={() => navigate('/create-account', { replace: true })}
-          >
-            Create an account
-          </button>
-        </div>
+        <MessageLink
+          message={"Don't have an account?"}
+          linkText={'Create an account'}
+          onClick={() => navigate('/create-account', { replace: true })}
+        />
       </div>
 
       <SocialLogin />

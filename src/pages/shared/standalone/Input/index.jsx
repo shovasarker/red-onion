@@ -1,15 +1,18 @@
 import React from 'react'
 
-const Input = ({ value, onChange, type, id, label }) => {
+const Input = ({ value, onChange, type, id, label, refs, className }) => {
   return (
     <div className='relative w-full mt-5 font-medium'>
       <input
+        ref={refs}
         type={type}
         id={id}
         placeholder={label}
         value={value}
         onChange={onChange}
-        className='peer w-full placeholder:text-transparent py-2 border-b border-b-gray-300 outline-none focus:outline-none '
+        className={`peer w-full placeholder:text-transparent py-2 border-b border-b-gray-300 outline-none focus:outline-none ${
+          className ? className : ''
+        }`}
       />
       <label
         htmlFor={id}

@@ -1,3 +1,4 @@
+import { signOut } from 'firebase/auth'
 import React from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { Link, useLocation } from 'react-router-dom'
@@ -43,6 +44,7 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
               ? 'text-white hover:text-amber-500'
               : 'text-black'
           } transition-colors duration-200`}
+          onClick={() => signOut(auth)}
         >
           Sign Out
         </button>
